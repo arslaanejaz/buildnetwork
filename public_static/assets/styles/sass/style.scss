@@ -1,0 +1,32 @@
+// use this file only to import scss modules
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato" rel="stylesheet');
+
+
+// bootstrap scss 
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// bootstrap scss grid
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/tables";
+
+
+//XBN theme
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/base";
+@import "modules/hamburger-icon";
+@import "modules/buttons";
+@import "modules/header";
+@import "modules/sprite";
+@import "modules/mediaquiries";
+@import "modules/footer";
+@import "modules/banner-section";
+@import "modules/content-section";
