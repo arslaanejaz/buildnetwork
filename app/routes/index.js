@@ -41,7 +41,7 @@ router.post('/sign-up', (req, res, next) => {
         res.send('Some Error Occure!');
         else{
             req.session.user = usr;
-            res.redirect('/profile');
+            res.redirect('/register');
         }
         
     });
@@ -83,7 +83,9 @@ router.post('/login', (req, res, next) => {
 //     });
 
 router.get('/profile', auth, (req, res, next)=>{
-res.send("Validated>>>>>>>>>>>>>>>>>>>>>>> <a href='/logout'>logout</a>");
+    res.render('static/welcome',{
+        page: ''
+    });
 });
 
 router.get('/logout', function(req, res) {

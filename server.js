@@ -23,8 +23,10 @@ mongoose.connect(configDB.url);
 
 //controller
 const indexRouter = require('./app/routes/index');
+const staticRouter = require('./app/routes/static');
 //home route
 app.use('/', indexRouter);
+app.use('/', staticRouter);
 
 // view engine setup
 var hbs = require('hbs');
