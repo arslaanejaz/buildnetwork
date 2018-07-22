@@ -33,13 +33,16 @@
     "style-loader": "^0.13.1",
     "truffle-contract": "^1.1.11",
     "waypoints": "^4.0.1",
-    "web3": "^0.20.0"
+    "web3": "^0.20.0",
+    "ws": "3.3.2"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "flash-express": "^1.0.4",
     "hbs": "^4.0.1",
     "jquery": "^3.3.1",
     "mongoose": "^5.1.6",

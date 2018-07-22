@@ -1,0 +1,91 @@
+.road-map{
+	position: relative;
+	padding: 60px 0;
+	&--container{
+		padding: 3em 2em 3em;
+		background: $color-light-grey;
+		position: relative;		
+	}
+	&--title{
+		font-size: 20px;
+		color: $color-purple;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+	&--details{
+		color: $color-reg-text;
+		line-height: 1.5;
+	}
+
+	.icon-container{
+		min-width: 130px;
+	}
+
+	.hexagon {
+		width: 100px;
+		height: 65px;
+		background: $color-indigo;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			top: -25px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-bottom: 25px solid $color-indigo;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -25px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-top: 25px solid $color-indigo;
+		}
+		img{
+			width: 80%;
+			position: absolute;
+			top: -15px;
+			left: 10px;
+			z-index: 9;
+		}
+	}
+	 .row{
+		.road-map--container{
+			&:after{
+			left: 100%;
+			top: 20%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-left-color: $color-light-grey;
+			border-width: 20px;
+			margin-top: -20px;
+			}
+		}
+		&:nth-child(odd){
+			.road-map--container{
+				&:after{
+				content: " ";
+				right: 100%;
+				left: auto;
+				border-right-color: $color-light-grey;
+				border-left-color: transparent;
+				}			
+			}
+		}
+		
+	}
+}
+
+		
+

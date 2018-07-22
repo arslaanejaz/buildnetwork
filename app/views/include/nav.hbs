@@ -1,5 +1,4 @@
 <div class="container-fluid">
-	
 <section class="site-header">
 	 
 	 	<div class="site-header--logo">
@@ -24,23 +23,56 @@
 	 					Road Map
 	 				</a>
 	 			</li>
-	 			<li class="horizontal-nav--item">
-	 				<a href="/register" class="horizontal-nav--item--link{{ternery page 'register' ' active' ''}}">
-	 					Register
+				 <li class="horizontal-nav--item">
+	 				<a href="/loans" class="horizontal-nav--item--link{{ternery page 'loans' ' active' ''}}">
+	 					Loans
 	 				</a>
 	 			</li>
+	 			
 	 			<li class="horizontal-nav--item">
 	 				<a href="/xbn-tokens" class="horizontal-nav--item--link{{ternery page 'xbn-tokens' ' active' ''}}">
 	 					XBN Tokens
 	 				</a>
 	 			</li>
-	 			<li class="horizontal-nav--item{{ternery page 'faqs' ' active' ''}}">
-	 				<a href="/faqs" class="horizontal-nav--item--link">
+	 			<li class="horizontal-nav--item">
+	 				<a href="/faqs" class="horizontal-nav--item--link{{ternery page 'faqs' ' active' ''}}">
 	 					FAQs
 	 				</a>
 	 			</li>
+
+				{{#if user}}
+				<li class="horizontal-nav--item">
+	 				<a href="/members" class="horizontal-nav--item--link{{ternery page 'members' ' active' ''}}">
+	 					Members
+	 				</a>
+	 			</li>
+				<li class="horizontal-nav--item">
+	 				<a href="/profile" class="horizontal-nav--item--link{{ternery page 'profile' ' active' ''}}">
+	 					Profile
+	 				</a>
+	 			</li>
+				 <li class="horizontal-nav--item">
+	 				<a href="/logout" class="horizontal-nav--item--link">
+	 					Logout
+	 				</a>
+	 			</li>
+				{{else}}
+				<li class="horizontal-nav--item">
+	 				<a href="/register" class="horizontal-nav--item--link{{ternery page 'register' ' active' ''}}">
+	 					Register
+	 				</a>
+	 			</li>
+				 <li class="horizontal-nav--item">
+	 				<a href="/sign-in" class="horizontal-nav--item--link{{ternery page 'sign-in' ' active' ''}}">
+	 					Login
+	 				</a>
+	 			</li>
+				{{/if}}
+
+
+
 	 		</ul>
 	 	</div>
-	
+
 </section>
 </div>

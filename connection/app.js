@@ -1,42 +1,63 @@
 const contract = require('truffle-contract');
 
-const metacoin_artifact = require('../build/contracts/MetaCoin.json');
-var MetaCoin = contract(metacoin_artifact);
+const token_artifact = require('../build/contracts/Token.json');
+const sale_artifact = require('../build/contracts/Sale.json');
+
+var Token = contract(token_artifact);
+var Sale = contract(sale_artifact);
 
 module.exports = {
   start: function(callback) {
     var self = this;
-
-    // Bootstrap the MetaCoin abstraction for Use.
-    MetaCoin.setProvider(self.web3.currentProvider);
-
     // Get the initial account balance so it can be displayed.
+    // console.log(self.web3.eth.accounts)
     self.web3.eth.getAccounts(function(err, accs) {
       if (err != null) {
-        alert("There was an error fetching your accounts.");
+        console.log(err);
+        console.log("There was an error fetching your accounts.");
         return;
       }
 
       if (accs.length == 0) {
-        alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
+        console.log("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
         return;
       }
       self.accounts = accs;
-      self.account = self.accounts[2];
+      self.account = self.accounts[0];
+      console.log(self.account)
 
       callback(self.accounts);
     });
   },
-  refreshBalance: function(account, callback) {
+  setupCoin: function() {
     var self = this;
 
     // Bootstrap the MetaCoin abstraction for Use.
-    MetaCoin.setProvider(self.web3.currentProvider);
+    Sale.setProvider(self.web3.currentProvider)
 
     var meta;
-    MetaCoin.deployed().then(function(instance) {
+    Sale.deployed().then(function(instance) {
       meta = instance;
-      return meta.getBalance.call(account, {from: account});
+      return meta.setup("0x7adf0a1802b2dcdc5db83e8031a63dcacef9a109",7000000, {from: self.account});
+    }).then(function() {
+      console.log("one time start...")
+    }).catch(function(e) {
+      console.log(e);
+      callback("ERROR 404");
+    });
+  },
+  getTokens: function(account, callback) {
+    var self = this;
+
+    // Bootstrap the MetaCoin abstraction for Use.
+    Token.setProvider(self.web3.currentProvider);
+    
+
+    var meta;
+    Token.deployed().then(function(instance) {
+      meta = instance;
+      console.log(account);
+      return meta.balanceOf(account);
     }).then(function(value) {
         callback(value.valueOf());
     }).catch(function(e) {
@@ -44,14 +65,25 @@ module.exports = {
         callback("Error 404");
     });
   },
+  sendTransaction: function(account, amount,callback){
+    var self = this;
+    self.web3.eth.sendTransaction({
+      from:account, 
+      to:"0x25684847be4835c5556295f466c9d973076509bb", 
+      value: self.web3.toWei(amount, "ether")},
+      function(){
+        callback('done');
+      });
+      
+  },
   sendCoin: function(amount, sender, receiver, callback) {
     var self = this;
 
     // Bootstrap the MetaCoin abstraction for Use.
-    MetaCoin.setProvider(self.web3.currentProvider);
+    Sale.setProvider(self.web3.currentProvider);
 
     var meta;
-    MetaCoin.deployed().then(function(instance) {
+    Sale.deployed().then(function(instance) {
       meta = instance;
       return meta.sendCoin(receiver, amount, {from: sender});
     }).then(function() {

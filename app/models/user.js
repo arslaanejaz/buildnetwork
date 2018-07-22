@@ -5,6 +5,14 @@ var userSchema = mongoose.Schema({
   local: {
     email: {type: String, unique: true},
     password: String,
+    first_name: String,
+    last_name: String,
+    gender: String,
+    address1: String,
+    address2: String,
+    city: String,
+    zip: String
+
   }
 });
 

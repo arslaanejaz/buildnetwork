@@ -1,0 +1,82 @@
+<div class="banner-section inner-page-banner">
+	<h2 class="banner-section--content--title">
+		Welcome {{user.local.first_name}} {{user.local.last_name}}
+	</h2>		
+</div>
+
+<div class="container">
+	<div class="container">
+	<div class="col-md-8 offset-md-2 xbn-form">
+		<h1 class="section-title text-center mt-4">ENTER YOUR INFO</h1>
+		<form method="POST" action="/profile-update">
+		 <div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="">First Name</label>
+	      <input type="text" class="form-control xbn-form--input" name="first_name" id="first_name" value="{{user.local.first_name}}" placeholder="First Name">
+	    </div>
+	    <div class="form-group col-md-6">
+	      <label for="">Last Name</label>
+	      <input type="text" class="form-control xbn-form--input" name="last_name" id="last_name" value="{{user.local.last_name}}" placeholder="Last Name">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="inputEmail4">Email</label>
+	      <input type="email" class="form-control xbn-form--input" name="email" id="inputEmail4" value="{{user.local.email}}" readonly>
+	    </div>
+
+	  </div>
+	  <div class="form-group">
+	  	<div class="form-group col-md-6">
+	  		<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" {{ternery user.local.gender 'male' 'checked' ''}} name="gender" id="inlineRadio1" value="male">
+			  <label class="form-check-label" for="inlineCheckbox1">Male</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="gender" {{ternery user.local.gender 'male' 'checked' ''}} id="inlineRadio2" value="female">
+			  <label class="form-check-label" for="inlineCheckbox2">Female</label>
+			</div>
+	  	</div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputAddress">Address</label>
+	    <input type="text" class="form-control xbn-form--input" id="inputAddress" name="address1" value="{{user.local.address1}}" placeholder="1234 Main St">
+	  </div>
+	  <div class="form-group">
+	    <label for="inputAddress2">Address 2</label>
+	    <input type="text" class="form-control xbn-form--input" id="inputAddress2" name="address2" value="{{user.local.address2}}" placeholder="Apartment, studio, or floor">
+	  </div>
+	  <div class="form-row">
+	    <div class="form-group col-md-6">
+	      <label for="inputCity">City</label>
+	      <input type="text" class="form-control xbn-form--input" name="city" value="{{user.local.city}}" id="inputCity">
+	    </div>
+	    {{!-- <div class="form-group col-md-4">
+	      <label for="inputState">State</label>
+	      <select id="inputState" class="form-control">
+	        <option selected>Choose...</option>
+	        <option>...</option>
+	      </select>
+	    </div> --}}
+	    <div class="form-group col-md-2">
+	      <label for="inputZip">Zip</label>
+	      <input type="text" class="form-control xbn-form--input" name="zip" value="{{user.local.zip}}" id="inputZip">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="form-check">
+	      <input class="form-check-input" type="checkbox" name="terms" id="gridCheck">
+	      <label class="form-check-label" for="gridCheck">
+	        Read and Agree on terms and conditions
+	      </label>
+	    </div>
+	  </div>
+	  <button class="xbn-btn normal" type="submit">Update</button>
+	</form>
+
+      </div>
+     
+
+</div>
+
+</div>

@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Document</title>
+    <title>Build Network</title>
     <link rel="stylesheet" href="/assets/styles/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 </head>
 <body>
-	
-{{> navPartial page=page}}
-	
+{{> navPartial page=page user=user.local}}
+
 {{{body}}}
 
 <footer class="site-footer">
@@ -34,12 +35,12 @@
 		XBN - ©2018 All Rights Reserved 
 	</div>
 </footer>
-
+<script type="text/javascript" src="flash/flash-client.js"></script> 
 </body>
 </html>
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 <script>
 $(document).ready(function(){
 	$('#nav-icon').click(function(){

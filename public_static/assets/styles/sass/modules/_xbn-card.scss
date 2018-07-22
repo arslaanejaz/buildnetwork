@@ -20,6 +20,9 @@
 			}
 			img{
 				max-width: 100%;
+				filter: gray;
+				  -webkit-filter: grayscale(1);
+				  filter: grayscale(1);
 			}
 		}
 	}
