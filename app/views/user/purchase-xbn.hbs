@@ -1,5 +1,5 @@
 
-<div class="banner-section inner-page-banner">
+{{!-- <div class="banner-section inner-page-banner">
 	<h2 class="banner-section--content--title">
 		Purchase XBN Token
 	</h2>		
@@ -29,21 +29,19 @@
 	</div>
 
 
-</div>
+</div> --}}
 
 
 
 
-{{!-- <div class="container">
+<div class="container">
 <form method="POST" action="/pay" class="xbn-signin text-center">      
       <!-- <h1 class="section-title">Please sign in</h1> -->
       <img class="xbn-signin--icon" src="assets/images/login-icon.png" alt="">
+      <input type="text" name="account" class="form-control xbn-signin--input" placeholder="account address" required="" autofocus="">
       <input type="text" name="amount" class="form-control xbn-signin--input" placeholder="amount" required="" autofocus="">
       
-      <div class="checkbox mb-3">
-        Your Coins: {{balance}}
-      </div>
       <button class="xbn-btn normal" type="submit">Make Transaction</button>
      
     </form>
-</div> --}}
+</div>

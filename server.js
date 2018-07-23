@@ -119,6 +119,7 @@ app.listen(port, () => {
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
     
     //truffle_connect.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    truffle_connect.web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/e3eac9aa73e74660923fa7cf147f2621"));
     
   }
   console.log("Express Listening at http://localhost:" + port);

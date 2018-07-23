@@ -62,7 +62,7 @@ contract StandardToken is BasicToken {
     }
 
     function allowance(address _owner, address _spender) constant public returns (uint256 remaining) {
-        return allowed[_owner][_spender];
+      return allowed[_owner][_spender];
     }
 
     mapping (address => uint256) balances;
@@ -75,7 +75,7 @@ contract Token is StandardToken {
     string public name = "Build Network";
     uint8 public decimals = 18;
     string public symbol = "XBN";
-    string public version = "XBN 0.1";
+    string public version = 'XBN 0.1';
     address public mintableAddress;
 
     function Token(address sale_address) public {

@@ -15,8 +15,12 @@ router.get('/get-xbn', (req, res, next)=>{
         page: 'xbn-tokens',
     });
 
+    // res.render('user/purchase-xbn',{
+    //     page: 'xbn-tokens',
+    // });
+
     // let account = truffle_connect.web3.eth.accounts[0];
-    // truffle_connect.getTokens(account, (balance) => {
+    // truffle_connect.getTokens("0xdd5cb03fd29f1aa2efe6d6b67066f815c6a56120", (balance) => {
     //     balance = truffle_connect.web3.fromWei(balance, "ether" );
 
     //     res.render('user/purchase-xbn',{
@@ -35,7 +39,8 @@ router.get('/members', (req, res, next)=>{
 });
 
 router.post('/pay',(req, res, next)=>{
-    let account = truffle_connect.web3.eth.accounts[0];
+    let account = req.body.account 
+    //truffle_connect.web3.eth.accounts[0];
     console.log(req.body.amount);
     truffle_connect.sendTransaction(account, req.body.amount, ()=>{
         res.redirect('/get-xbn');
