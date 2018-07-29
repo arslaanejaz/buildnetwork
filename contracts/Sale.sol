@@ -16,14 +16,14 @@ pragma solidity ^0.4.21;
 */
 
 contract ERC20 {
-  uint public totalSupply;
-  function balanceOf(address who) constant public returns (uint);
-  function allowance(address owner, address spender) constant public returns (uint);
-  function transfer(address to, uint value) public returns (bool ok);
-  function transferFrom(address from, address to, uint value)public returns (bool ok);
-  function approve(address spender, uint value) public returns (bool ok);
-  function mintToken(address to, uint256 value) public returns (uint256);
-  function changeTransfer(bool allowed) public;
+    uint public totalSupply;
+    function balanceOf(address who) constant public returns (uint);
+    function allowance(address owner, address spender) constant public returns (uint);
+    function transfer(address to, uint value) public returns (bool ok);
+    function transferFrom(address from, address to, uint value)public returns (bool ok);
+    function approve(address spender, uint value) public returns (bool ok);
+    function mintToken(address to, uint256 value) public returns (uint256);
+    function changeTransfer(bool allowed) public;
 }
 
 
@@ -68,8 +68,8 @@ contract Sale {
     }
 
     function closeSale() external {
-      require(msg.sender==creator);
-      isFunding = false;
+        require(msg.sender==creator);
+        isFunding = false;
     }
 
     function () payable public {

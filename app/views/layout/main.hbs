@@ -1,51 +1,242 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Build Network</title>
-    <link rel="stylesheet" href="/assets/styles/css/style.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XBN | Website Template</title>
+    <link rel="icon" href="images/iconlogo.png">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:300,400,600,700,800|Raleway:200,300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/navbar_styleSheet.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font/flaticon.css">
+    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/custom.css">
 
+
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
+	<!-- preloader start  -->
+    <div id="spinners">
+        <div id="preloader_1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
 {{> navPartial page=page user=user.local}}
 
 {{{body}}}
+<section id="team_part" style="background: url(images/team/team.jpg) center center / cover no-repeat;">
+        <div class="container">
+            <div class="row">
+                <div class="shap_list">
+                <div class="upper_part">
+                    <h4>OUR TEAM</h4>
+                </div>
+                    <div class="col-sm-6">
+                        <div class="shap">
+                            <div class="image1">
+                                <img src="images/team/team-1.png" class="img-responsive" alt="shap">
+                            </div>
+                            <div class="image1">
+                                <img src="images/team/team-2.png" class="img-responsive" alt="shap">
+                            </div>
+                            <div class="image1">
+                                <img src="images/team/team-3.png" class="img-responsive" alt="shap">
+                            </div>
+                            {{!-- <div class="image1">
+                                <img src="images/team/shape2.jpg" class="img-responsive" alt="shap">
+                            </div> --}}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="shap_info">
+                            <div class="shap_info_text">
+                                <h4>Washikar Mohammad Ikbal</h4>
+                                <p>Team 1</p>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s , when an unknown printer took a gallery of type and scrambled.</h6>
+                                <h3>Mohammad Ikabl</h3>
+                                <h5>Follow Me</h5>
+                                <a href="#"><span class="fa fa-facebook"></span></a>
+                                <a href="#"><span class="fa fa-twitter"></span></a>
+                                <a href="#"><span class="fa fa-pinterest"></span></a>
+                                <a href="#"><span class="fa fa-linkedin"></span></a>
+                                <a href="#"><span class="fa fa-behance"></span></a>
+                            </div>
+                            <div class="shap_info_text">
+                                <div class="shap_info_text">
+                                    <h4>Sakeba Aney</h4>
+                                    <p>Team 2</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled.</h6>
+                                    <h3>Sakeba Aney</h3>
+                                    <h5>Follow Me</h5>
+                                    <a href="#"><span class="fa fa-facebook"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-behance"></span></a>
+                                </div>
+                            </div>
+                            <div class="shap_info_text">
+                                <div class="shap_info_text">
+                                    <h4>Mahadi Tahsan</h4>
+                                    <p>Team 3</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled.</h6>
+                                    <h3>Mahadi Tahsan</h3>
+                                    <h5>Follow Me</h5>
+                                    <a href="#"><span class="fa fa-facebook"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-behance"></span></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- footer part start -->
+    <a href="#" class="back-top-btn"><span class="fa fa-arrow-up"></span></a>
+    <footer id="footer_part">
+        <div class="container">
+            <div class="row">
+                {{!-- <div class="newsletter">
+                    <div class="col-md-4">
+                        <i class="fa fa-paper-plane"></i>
+                        <span>Newsletter</span>
+                        <p>The latest from XBN, Write your inbox</p>
+                    </div>
+                    <form class="form-group form_margin">
+                        <div class="col-md-4 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-4 col-sm-6 mail">
+                            <input type="text" class="form-control" placeholder="Your Mail">
+                            <button type="submit" class="btn btn-default sub-btn"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div> --}}
+                <div class="footer">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact_part">
+                            <h5>Contact us</h5>
+                            <p><i class="fa fa-map-marker"><span>1234, Park Street Avenue,Newyork</span></i></p>
+                            <p><i class="fa fa-phone" aria-hidden="true"><span><a href="tel:+880 1234 56789">+880 1234 56789</a>, <a href="tel:+880 9876 54321">+880 9876 54321</a></span></i></p>
+                            <p><i class="fa fa-envelope"><span><a href="mailto:support@buildnetwork.org">support@buildnetwork.org</a></span></i></p>
+                            <p><i class="fa fa-globe"><span><a href="http://buildnetwork.org">buildnetwork.org</a></span></i></p>
+                            <p><i class="fa fa-fax"><span><a href="tel:+880123456789">+880 1234 56789</a>, <a href="tel:+880987654321">+880 9876 54321</a></span></i></p>
+                        </div>
+                    </div>
+                     <div class="col-md-3 col-sm-6">
+                        <div class="twitter-part">
+                            <h5>INFORMATION</h5>
+                             <ul>
+                                <li><a href="/terms-of-services">Terms of Services</a></li>
+                                <li><a href="/privacypolicy">Pivacy Policy</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="twitter-part">
+                            <h5>Twetter Feed</h5>
+                            <div class="tweet1">
+                                <div class="t-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="t-details">
+                                    <span>We want to introduce you to a new crypto currency XBN.</span>
+                                    <p> 24 July 2017.</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="tweet1">
+                                <div class="t-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="t-details">
+                                    <span>We want to introduce you to a new crypto currency XBN.</span>
+                                    <p> 24 July 2017.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<footer class="site-footer">
-	<div class="inner-footer">
-		<ul class="horizontal-nav">
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">White Paper</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Road Map</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Register</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">XBN Tokens</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">FAQ</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Terms & Condition</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Privacy Policy</a></li>
-		</ul>
-		<ul class="social-media-icons">
-			<li><a href="https://www.facebook.com/Build-Network-2125228124431613/?modal=admin_todo_tour"><i class="fa fa-facebook-square"></i></a></li>
-			<li><a href="https://twitter.com/network_build"><i class="fa fa-twitter-square" ></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram"></i></a></li>			
-		</ul>
-	</div>
-	<div class="lower-footer">
-		XBN - ©2018 All Rights Reserved 
-	</div>
-</footer>
-<script type="text/javascript" src="flash/flash-client.js"></script> 
+                    <div class="col-md-3 col-sm-6">
+                        <div class="opening">
+                            <h5>Opening hours</h5>
+                            <div class="day">
+                                <p>Mon-Fri<span>: 08.00 A.M - 10.00 P.M</span></p>
+                                <p>Saturday<span>: 08.00 A.M - 02.00 P.M</span></p>
+                                <p>Sunday<span>: Closed</span></p>
+                                <p>Holidays<span>: Closed</span></p>
+                                <p>Half-Holidays<span>: 08.00 A.M - 02.00 P.M</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer part end -->
+
+    <!-- Footer-bottom -->
+    <section id="footer-btm">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                <div class="footer-btm text-left">
+                    <p>Copyright &copy; XBN 2018. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+            <div class="social">
+                <a href="https://www.facebook.com/Build-Network-2125228124431613/?modal=admin_todo_tour"><span class="fa fa-facebook"></span></a>
+                <a href="https://twitter.com/network_build"><span class="fa fa-twitter"></span></a>
+            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/counterup.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> 
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="flash/flash-client.js"></script>
 </body>
 </html>
-
-
-
-<script>
-$(document).ready(function(){
-	$('#nav-icon').click(function(){
-		$(this).toggleClass('open');
-		$('.site-header--main-nav').toggleClass('active');
-	});
-});
-</script>

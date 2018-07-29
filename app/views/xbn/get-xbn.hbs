@@ -1,0 +1,52 @@
+
+	<script src="/libs/bundle.js"></script>
+
+    <section class="banner_area" style=" background: url(images/banner-bg.jpg) no-repeat fixed;" data-stellar-background-ratio="0.5">
+        <h2>Welcome</h2>
+				<h3>{{user.local.first_name}} {{user.local.last_name}}</h3>
+    </section>
+<!-- Banner area -->
+    <section class="banner_area" style=" background: url(images/banner-bg.jpg) no-repeat fixed;" data-stellar-background-ratio="0.5">
+        <h2>Get XBN</h2>
+        <ol class="breadcrumb">
+            <li><a href="#" class="active">XBN Rate: 563.73 XBN <> 1 ETH</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
+
+<section class="container" id="content">
+<div id="wrapper">
+    <div class="container">
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+<h1>Exchange ETH to XBN</h1>
+		 <div class="form-row">
+	    <div class="form-group">
+	      <label for="">Amount to ETH exchange</label>
+	      <input type="text" class="form-control" id="eth" value="0" placeholder="0.00">
+	    </div>
+	    <div class="form-group">
+	      <label for="">Amount of XBN you will receive</label>
+	      <input type="text" readonly class="form-control" id="xbn" value="0">
+	    </div>
+	  </div>
+		
+{{!-- <input type="text" class="form-control" id="address" value="{{user.local.address}}" name="address" placeholder="0x"> --}}
+	 
+
+<br />
+		{{!-- <div class="banner_text"> --}}
+			<a id="submit" class="btn btn-primary">Submit</a>
+    {{!-- </div> --}}
+
+
+    </div>
+    </div>    
+    </div>
+
+
+</div>
+
+</section>
+

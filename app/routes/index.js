@@ -10,7 +10,7 @@ var flashOption = {
 
 router.get('/register', (req, res, next) => {
     if(req.session.user) 
-    res.redirect('/profile');
+    res.redirect('/get-xbn');
     else
     res.render('user/register',{
         page: 'register'
@@ -19,7 +19,7 @@ router.get('/register', (req, res, next) => {
 
 router.get('/sign-in', (req, res, next) => {
     if(req.session.user) 
-    res.redirect('/profile');
+    res.redirect('/get-xbn');
     else
     res.render('user/sign-in',{
         page: 'sign-in'
@@ -107,6 +107,7 @@ router.post('/sign-up', (req, res, next) => {
                     user.local.gender = req.body.gender;
                     user.local.address1 = req.body.address1;
                     user.local.address2 = req.body.address2;
+                    user.local.address = req.body.address;
                     user.local.city = req.body.city;
                     user.local.zip = req.body.zip;
     
@@ -117,7 +118,7 @@ router.post('/sign-up', (req, res, next) => {
                         }else{
                             req.session.user = usr;
                             res.flash('User Registered successfully.',flashOption);
-                            res.redirect('/profile');
+                            res.redirect('/get-xbn');
                             }
                             
                         });
@@ -137,7 +138,7 @@ router.post('/sign-in', (req, res, next) => {
                 req.session.regenerate(() => {
                     req.session.user = usr;
                     // res.locals.user = usr;
-                    res.redirect('/profile');
+                    res.redirect('/get-xbn');
                   });
             }else{
                 res.flash('Password not match!','error',flashOption);

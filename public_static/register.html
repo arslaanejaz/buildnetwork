@@ -1,179 +1,459 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/styles/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REGISTER | Website Template</title>
+    <link rel="icon" href="images/iconlogo.png">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:300,400,600,700,800|Raleway:200,300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/navbar_styleSheet.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font/flaticon.css">
+    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
+
 <body>
+    <!-- preloader start  -->
+    <div id="spinners">
+        <div id="preloader_1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
 
-<div class="container-fluid">
-<section class="site-header">
-	 
-	 	<div class="site-header--logo">
-	 		<a href="#"><img src="assets/images/xbn-logo.png" alt=""></a>
-	 	</div>	 	
-	 		<div id="nav-icon" class="nav-icon">
-			  <span></span>
-			  <span></span>
-			  <span></span>
-			  <span></span>
-			</div>
+    <!--  Navbar start-->
+    <nav id="header" class="navbar navbar-fixed-top">
+        <div id="header-container" class="container navbar-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="brand" class="navbar-brand" href="inde.html">
+                    <img src="images/svg/logo.svg" style="width:117px;height:58px;" alt="logo">
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="whitepaper.php">White Paper</a></li>
+                    <li><a href="roadmap.php">Road Map</a></li>
+                    <li><a href="#">Loans</a></li>
+                    <li><a href="#">XBN Tokens</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contractors</a></li>
+                    <li><a href="#">Members Area</a></li>
+                    <li><a href="#">Faqs</a></li>
+                    <li><a href="register.php">Register</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar part end-->
+    
+<!-- Banner area -->
+    <section class="banner_area" style=" background: url(images/banner-bg.jpg) no-repeat fixed;" data-stellar-background-ratio="0.5">
+        <h2>REGISTER</h2>
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">Register</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
 
-	 	<div class="site-header--main-nav">
-	 		<ul class="horizontal-nav">
-	 			<li class="horizontal-nav--item">
-	 				<a href="#" class="horizontal-nav--item--link">
-	 					White Paper
-	 				</a>
-	 			</li>
-	 			<li class="horizontal-nav--item">
-	 				<a href="#" class="horizontal-nav--item--link">
-	 					Road Map
-	 				</a>
-	 			</li>	 			
-	 			<li class="horizontal-nav--item">
-	 				<a href="#" class="horizontal-nav--item--link">
-	 					Register
-	 				</a>
-	 			</li>
-	 			<li class="horizontal-nav--item">
-	 				<a href="#" class="horizontal-nav--item--link active">
-	 					XBN Tokens
-	 				</a>
-	 			</li>
-	 			<li class="horizontal-nav--item">
-	 				<a href="#" class="horizontal-nav--item--link">
-	 					FAQs
-	 				</a>
-	 			</li>
-	 		</ul>
-	 	</div>
-	
-</section>
+<section id="content">
+<div id="wrapper">
+    <div class="container">
+    <div class="row">
+        <img src="images/Reg.png" style="width:90px;height:90px;"  alt="placeholder+image">
+        <h4 style="font-size: 26px;color: #feb814;"> Register </h4>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+        <form action="" method="POST" role="form">
+           <div class="row">
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="First Name" id="">
+             </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Last Name" id="">
+               </div>
+           <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email" id="">
+               </div>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Create Password" id="">
+               </div>
+                <div class="form-group">
+                  <div class="radio">
+                      <label>
+                          <input type="radio" name="" id="input" value="" checked="checked">
+                          Male
+                      </label>
+                      <label>
+                          <input type="radio" name="" id="input" value="" checked="checked">
+                          Female
+                      </label>
+                  </div>
+               </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Address" id="">
+               </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Address 2" id="">
+               </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="City" id="">
+               </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control" placeholder="ZIP" id="">
+               </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                       Read and Agree on terms and conditions
+                    </label>
+                </div>
+
+
+
+           </div>
+                                      <div class="banner_text">
+                                    <a href="#">Register</a>
+                                <a href="#" class="blank">Cancel</a>
+                        </div>
+           </form>
+    </div>
+    </div>
+    
+           
+    </div>
 </div>
-
-<div class="banner-section inner-page-banner">
-	<h2 class="banner-section--content--title">
-		Register with XBN
-	</h2>		
-</div>
-
-<div class="container">
-	<div class="col-md-8 offset-md-2 xbn-form">
-		<h1 class="section-title text-center mt-4">ENTER YOUR INFO</h1>
-		<form>
-		 <div class="form-row">
-	    <div class="form-group col-md-6">
-	      <label for="">First Name</label>
-	      <input type="text" class="form-control xbn-form--input" id="" placeholder="First Name">
-	    </div>
-	    <div class="form-group col-md-6">
-	      <label for="">Last Name</label>
-	      <input type="text" class="form-control xbn-form--input" id="" placeholder="Last Name">
-	    </div>
-	  </div>
-	  <div class="form-row">
-	    <div class="form-group col-md-6">
-	      <label for="inputEmail4">Email</label>
-	      <input type="email" class="form-control xbn-form--input" id="inputEmail4" placeholder="Email">
-	    </div>
-	    <div class="form-group col-md-6">
-	      <label for="inputPassword4">Create Password</label>
-	      <input type="password" class="form-control xbn-form--input" id="inputPassword4" placeholder="Password">
-	    </div>
-	  </div>
-	  <div class="form-group">
-	  	<div class="form-group col-md-6">
-	  		<div class="form-check form-check-inline">
-			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-			  <label class="form-check-label" for="inlineCheckbox1">Male</label>
-			</div>
-			<div class="form-check form-check-inline">
-			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-			  <label class="form-check-label" for="inlineCheckbox2">Female</label>
-			</div>
-	  	</div>
-	  </div>
-	  <div class="form-group">
-	    <label for="inputAddress">Address</label>
-	    <input type="text" class="form-control xbn-form--input" id="inputAddress" placeholder="1234 Main St">
-	  </div>
-	  <div class="form-group">
-	    <label for="inputAddress2">Address 2</label>
-	    <input type="text" class="form-control xbn-form--input" id="inputAddress2" placeholder="Apartment, studio, or floor">
-	  </div>
-	  <div class="form-row">
-	    <div class="form-group col-md-6">
-	      <label for="inputCity">City</label>
-	      <input type="text" class="form-control xbn-form--input" id="inputCity">
-	    </div>
-	    <div class="form-group col-md-4">
-	      <label for="inputState">State</label>
-	      <select id="inputState" class="form-control">
-	        <option selected>Choose...</option>
-	        <option>...</option>
-	      </select>
-	    </div>
-	    <div class="form-group col-md-2">
-	      <label for="inputZip">Zip</label>
-	      <input type="text" class="form-control xbn-form--input" id="inputZip">
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <div class="form-check">
-	      <input class="form-check-input" type="checkbox" id="gridCheck">
-	      <label class="form-check-label" for="gridCheck">
-	        Read and Agree on terms and conditions
-	      </label>
-	    </div>
-	  </div>
-	  
-	</form>
-
-<button class="xbn-btn normal" type="submit">Sign in</button>
-      </div>
-      
-
-</div>
+ </section>
 
 
-<footer class="site-footer">
-	<div class="inner-footer">
-		<ul class="horizontal-nav">
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">White Paper</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Road Map</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Register</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">XBN Tokens</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">FAQ</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Terms & Condition</a></li>
-			<li class="horizontal-nav--item"><a class="horizontal-nav--item--link" href="#">Privacy Policy</a></li>
-		</ul>
-		<ul class="social-media-icons">
-			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-twitter-square" ></i></a></li>
-			<li><a href="#"><i class="fa fa-instagram"></i></a></li>			
-		</ul>
-	</div>
-	<div class="lower-footer">
-		XBN - ©2018 All Rights Reserved 
-	</div>
-</footer>
+    <!-- Team part start -->
+    <section id="team_part" style="background: url(images/team/team.jpg) center center / cover no-repeat;">
+        <div class="container">
+            <div class="row">
+                <div class="shap_list">
+                <div class="upper_part">
+                    <h4>OUR TEAM</h4>
+                </div>
+                    <div class="col-sm-6">
+                        <div class="shap">
+                            <div class="image1">
+                                <img src="images/team/shape1.jpg" class="img-responsive" alt="shap">
+                            </div>
+                            <div class="image1">
+                                <img src="images/team/shape2.jpg" class="img-responsive" alt="shap">
+                            </div>
+                            <div class="image1">
+                                <img src="images/team/shape1.jpg" class="img-responsive" alt="shap">
+                            </div>
+                            <div class="image1">
+                                <img src="images/team/shape2.jpg" class="img-responsive" alt="shap">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="shap_info">
+                            <div class="shap_info_text">
+                                <h4>Washikar Mohammad Ikbal</h4>
+                                <p>Team 1</p>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s , when an unknown printer took a gallery of type and scrambled.</h6>
+                                <h3>Mohammad Ikabl</h3>
+                                <h5>Follow Me</h5>
+                                <a href="#"><span class="fa fa-facebook"></span></a>
+                                <a href="#"><span class="fa fa-twitter"></span></a>
+                                <a href="#"><span class="fa fa-pinterest"></span></a>
+                                <a href="#"><span class="fa fa-linkedin"></span></a>
+                                <a href="#"><span class="fa fa-behance"></span></a>
+                            </div>
+                            <div class="shap_info_text">
+                                <div class="shap_info_text">
+                                    <h4>Sakeba Aney</h4>
+                                    <p>Team 2</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled.</h6>
+                                    <h3>Sakeba Aney</h3>
+                                    <h5>Follow Me</h5>
+                                    <a href="#"><span class="fa fa-facebook"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-behance"></span></a>
+                                </div>
+                            </div>
+                            <div class="shap_info_text">
+                                <div class="shap_info_text">
+                                    <h4>Mahadi Tahsan</h4>
+                                    <p>Team 3</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled.</h6>
+                                    <h3>Mahadi Tahsan</h3>
+                                    <h5>Follow Me</h5>
+                                    <a href="#"><span class="fa fa-facebook"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-behance"></span></a>
+                                </div>
+                            </div>
+                            <div class="shap_info_text">
+                                <div class="shap_info_text">
+                                    <h4>Sakeba Aney</h4>
+                                    <p>Team 4</p>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled.</h6>
+                                    <h3>Sakeba Aney</h3>
+                                    <h5>Follow Me</h5>
+                                    <a href="#"><span class="fa fa-facebook"></span></a>
+                                    <a href="#"><span class="fa fa-twitter"></span></a>
+                                    <a href="#"><span class="fa fa-pinterest"></span></a>
+                                    <a href="#"><span class="fa fa-linkedin"></span></a>
+                                    <a href="#"><span class="fa fa-behance"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Chef part end-->
 
+    <!-- Testimonial part start-->
+    <section id="testimonial_part">
+        <div class="container">
+            <div class="row">
+                <div class="upper_part">
+                    <h4>OUR PARTNERS</h4>
+                </div>
+                <div class="menu_part_text">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial_background">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="clent">
+                            <div class="col-md-6">
+                                <div class="image_background">
+                                    <img src="images/testimonials/testimonial_img.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="text_background text-center">
+                                    <h4 style="color:#000;>Ikbal Mohammad</h4>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <h6>Client 1</h6>
+                                    <p><span style="color:#000;"> Lorem Ipsum is simply dummy text of the printing and type setting. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="image_background">
+                                    <img src="images/testimonials/testimonial_img2.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="text_background">
+                                    <h4 style="color:#000;>Sakeba Aney</h4>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <h6>Client 2</h6>
+                                    <p><span style="color:#000;">Lorem Ipsum is simply dummy text of the printing and type setting. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="image_background">
+                                    <img src="images/testimonials/testimonial_img.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="text_background">
+                                    <h4 style="color:#000;>Mahadi Tahsan</h4>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <h6>Client 3</h6>
+                                    <p><span style="color:#000;">Lorem Ipsum is simply dummy text of the printing and type setting. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="image_background">
+                                    <img src="images/testimonials/testimonial_img2.png" class="img-responsive" alt="">
+                                </div>
+                                <div class="text_background">
+                                    <h4 style="color:#000;>Sneha Tasmi</h4>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <h6>Client 4</h6>
+                                    <p><span style="color:#000;">Lorem Ipsum is simply dummy text of the printing and type setting. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial part end -->
+    
+    
+<!-- footer part start -->
+    <a href="#" class="back-top-btn"><span class="fa fa-arrow-up"></span></a>
+    <footer id="footer_part">
+        <div class="container">
+            <div class="row">
+                <div class="newsletter">
+                    <div class="col-md-4">
+                        <i class="fa fa-paper-plane"></i>
+                        <span>Newsletter</span>
+                        <p>The latest from XBN, Write your inbox</p>
+                    </div>
+                    <form class="form-group form_margin">
+                        <div class="col-md-4 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-4 col-sm-6 mail">
+                            <input type="text" class="form-control" placeholder="Your Mail">
+                            <button type="submit" class="btn btn-default sub-btn"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact_part">
+                            <h5>Contact us</h5>
+                            <p><i class="fa fa-map-marker"><span>1234, Park Street Avenue,Newyork</span></i></p>
+                            <p><i class="fa fa-phone" aria-hidden="true"><span><a href="tel:+880 1234 56789">+880 1234 56789</a>, <a href="tel:+880 9876 54321">+880 9876 54321</a></span></i></p>
+                            <p><i class="fa fa-envelope"><span><a href="mailto:info@adminkaffee.com">info@xbn.com</a></span></i></p>
+                            <p><i class="fa fa-globe"><span><a href="http://www.kaffee.com">www.XBN.com</a></span></i></p>
+                            <p><i class="fa fa-fax"><span><a href="tel:+880123456789">+880 1234 56789</a>, <a href="tel:+880987654321">+880 9876 54321</a></span></i></p>
+                        </div>
+                    </div>
+                     <div class="col-md-3 col-sm-6">
+                        <div class="twitter-part">
+                            <h5>INFORMATION</h5>
+                             <ul>
+                                <li><a href="termsofservices.php">Terms of Services</a></li>
+                                <li><a href="privacypolicy.php">Pivacy Policy</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="twitter-part">
+                            <h5>Twetter Feed</h5>
+                            <div class="tweet1">
+                                <div class="t-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="t-details">
+                                    <span>We want to introduce you to a new crypto currency XBN.</span>
+                                    <p> 24 July 2017.</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="tweet1">
+                                <div class="t-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="t-details">
+                                    <span>We want to introduce you to a new crypto currency XBN.</span>
+                                    <p> 24 July 2017.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="opening">
+                            <h5>Opening hours</h5>
+                            <div class="day">
+                                <p>Mon-Fri<span>: 08.00 A.M - 10.00 P.M</span></p>
+                                <p>Saturday<span>: 08.00 A.M - 02.00 P.M</span></p>
+                                <p>Sunday<span>: Closed</span></p>
+                                <p>Holidays<span>: Closed</span></p>
+                                <p>Half-Holidays<span>: 08.00 A.M - 02.00 P.M</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer part end -->
+
+    <!-- Footer-bottom -->
+    <section id="footer-btm">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                <div class="footer-btm text-left">
+                    <p>Copyright &copy; XBN 2018. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+            <div class="social">
+                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="https://twitter.com/network_build"><span class="fa fa-twitter"></span></a>
+            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/counterup.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> 
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
 </body>
+
 </html>
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-<script>
-	$(document).ready(function(){
-		$('#nav-icon').click(function(){
-			$(this).toggleClass('open');
-			$('.site-header--main-nav').toggleClass('active');
-		});		
-	});
-</script>

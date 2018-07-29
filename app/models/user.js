@@ -11,7 +11,9 @@ var userSchema = mongoose.Schema({
     address1: String,
     address2: String,
     city: String,
-    zip: String
+    zip: String,
+    address: String,
+    updated_at: { type: Date, default: Date.now }
 
   }
 });

@@ -70,7 +70,7 @@ module.exports = {
     var self = this;
     self.web3.eth.sendTransaction({
       from:account, 
-      to:"0x7bfa11aa43833f8b980803bea180c54b82cacb2d", 
+      to:"0x25684847be4835c5556295f466c9d973076509bb", 
       value: self.web3.toWei(amount, "ether")},
       function(){
         callback('done');

@@ -21,6 +21,19 @@ router.get('/xbn-tokens', (req, res, next) => {
     });
 });
 
+router.get('/privacypolicy', (req, res, next) => {
+    res.render('static/privacypolicy',{
+        page: 'privacypolicy'
+    });
+});
+
+router.get('/terms-of-services', (req, res, next) => {
+    res.render('static/terms-of-services',{
+        page: 'terms-of-services'
+    });
+});
+
+
 router.get('/faqs', (req, res, next) => {
     res.render('static/faqs',{
         page: 'faqs'

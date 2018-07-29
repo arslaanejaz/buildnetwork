@@ -1,58 +1,74 @@
-<div class="banner-section inner-page-banner">
-	<h2 class="banner-section--content--title">
-		Register with XBN
-	</h2>		
-</div>
-{{{flash}}}
-<div class="container">
-	<div class="container">
-	<div class="col-md-8 offset-md-2 xbn-form">
-		<h1 class="section-title text-center mt-4">ENTER YOUR INFO</h1>
-		<form method="POST" action="/sign-up">
+
+	<script src="/libs/bundle.js"></script>
+
+<!-- Banner area -->
+    <section class="banner_area" style=" background: url(images/banner-bg.jpg) no-repeat fixed;" data-stellar-background-ratio="0.5">
+        <h2>ENTER YOUR INFO</h2>
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">ENTER YOUR INFO</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
+
+<section class="container" id="content">
+<div id="wrapper">
+    <div class="container">
+    <div class="row">
+        <img src="images/Reg.png" style="width:90px;height:90px;"  alt="placeholder+image">
+        <h4 style="font-size: 26px;color: #feb814;"> ENTER YOUR INFO </h4>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+<p class="alert alert-info" role="alert">This information is required for KYC ('Know Your Customer'), 
+	and is used to check a third-party database to make sure you're not a terrorist and deter against illicit activity (and make governments happy).
+If you need help, please contact us anytime with questions by emailing support@buildnetwork.org</p>
+<form method="POST" action="/sign-up">
 		 <div class="form-row">
-	    <div class="form-group col-md-6">
+	    <div class="form-group">
 	      <label for="">First Name</label>
-	      <input type="text" class="form-control xbn-form--input" name="first_name" id="first_name" placeholder="First Name">
+	      <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name">
 	    </div>
-	    <div class="form-group col-md-6">
+	    <div class="form-group">
 	      <label for="">Last Name</label>
-	      <input type="text" class="form-control xbn-form--input" name="last_name" id="last_name" placeholder="Last Name">
+	      <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name">
 	    </div>
 	  </div>
 	  <div class="form-row">
-	    <div class="form-group col-md-6">
+	    <div class="form-group">
 	      <label for="inputEmail4">Email</label>
-	      <input type="email" class="form-control xbn-form--input" name="email" id="inputEmail4" placeholder="Email">
+	      <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email">
 	    </div>
-	    <div class="form-group col-md-6">
+	    <div class="form-group">
 	      <label for="inputPassword4">Create Password</label>
-	      <input type="password" class="form-control xbn-form--input" name="password" id="inputPassword4" placeholder="Password">
+	      <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password">
 	    </div>
 	  </div>
-	  <div class="form-group">
-	  	<div class="form-group col-md-6">
-	  		<div class="form-check form-check-inline">
-			  <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male">
-			  <label class="form-check-label" for="inlineCheckbox1">Male</label>
-			</div>
-			<div class="form-check form-check-inline">
-			  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female">
-			  <label class="form-check-label" for="inlineCheckbox2">Female</label>
-			</div>
-	  	</div>
-	  </div>
+		<div class="form-group">
+                  <div class="radio">
+                      <label>
+                          <input class="form-check-input" checked type="radio" name="gender" id="inlineRadio1" value="male">
+													Male
+                      </label>
+                      <label>
+                          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female">
+													Female
+                      </label>
+                  </div>
+               </div>
+	  
 	  <div class="form-group">
 	    <label for="inputAddress">Address</label>
-	    <input type="text" class="form-control xbn-form--input" id="inputAddress" name="address1" placeholder="1234 Main St">
+	    <input type="text" class="form-control" id="inputAddress" name="address1" placeholder="1234 Main St">
 	  </div>
 	  <div class="form-group">
 	    <label for="inputAddress2">Address 2</label>
-	    <input type="text" class="form-control xbn-form--input" id="inputAddress2" name="address2" placeholder="Apartment, studio, or floor">
+	    <input type="text" class="form-control" id="inputAddress2" name="address2" placeholder="Apartment, studio, or floor">
 	  </div>
 	  <div class="form-row">
-	    <div class="form-group col-md-6">
+	    <div class="form-group">
 	      <label for="inputCity">City</label>
-	      <input type="text" class="form-control xbn-form--input" name="city" id="inputCity">
+	      <input type="text" class="form-control" name="city" id="inputCity">
 	    </div>
 	    {{!-- <div class="form-group col-md-4">
 	      <label for="inputState">State</label>
@@ -61,26 +77,54 @@
 	        <option>...</option>
 	      </select>
 	    </div> --}}
-	    <div class="form-group col-md-2">
+	    <div class="form-group">
 	      <label for="inputZip">Zip</label>
-	      <input type="text" class="form-control xbn-form--input" name="zip" id="inputZip">
+	      <input type="text" class="form-control" name="zip" id="inputZip">
 	    </div>
 	  </div>
+
+<div class="form-group">
+	    <label for="address">ETH Wallet Address</label>
+	    <input type="text" class="form-control" id="address" name="address" placeholder="0x">
+	  </div>
+
 	  <div class="form-group">
 	    <div class="form-check">
 	      <input class="form-check-input" type="checkbox" name="terms" id="gridCheck">
 	      <label class="form-check-label" for="gridCheck">
-	        Read and Agree on terms and conditions
+	        Read and Agree on <a target="_blank" href="/terms-of-services">terms and conditions</a>
 	      </label>
 	    </div>
 	  </div>
-	  <button class="xbn-btn normal" type="submit">Sign up</button>
+
+		<div class="alert alert-info" role="alert">
+		<p>
+	<b>ETH WALLET ADDRESS:</b> 
+	Enter the ETH Address you will be using for your purchase. 
+	Note: XBN Tokens can only be sent to the Wallet Address that you use to purchase XBN by sending Ethereum (which you can do on the next page). 
+	Your ETH Wallet Address must be a local ERC20-supported wallet. Do not enter an address or send Ethereum to the XBN Smart Contract from an exchange (like Coinbase, Gdax, Binance, etc.). Send first to a Local ERC20-supported wallet. See below for our list of recommended wallets:
+</p>
+<p>
+	<b>If you are using a Desktop Computer:</b>
+	Our personal favorite ETH Wallet is MetaMask, which is installed on your computer as a Chrome Browser Extension. Here is a link to MetaMask's website where you can download it: www.metamask.io). Another good one is MyEtherWallet (www.myetherwallet.com)
+</p>
+</div>
+
+		<div class="banner_text">
+			<button type="submit">Submit</button>
+                                    
+      {{!-- <a href="#" class="blank">Cancel</a> --}}
+                        </div>
+	  {{!-- <button class="xbn-btn normal" type="submit">Sign up</button> --}}
 	</form>
-<hr />
-<a href="/sign-in" class="xbn-btn normal">Already A Member?</a> 
-      </div>
-     
+
+
+    </div>
+    </div>    
+    </div>
+
 
 </div>
 
-</div>
+</section>
+

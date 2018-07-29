@@ -7,14 +7,14 @@ var flashOption = {
     duration:"5000"
   };
 
-const truffle_connect = require('../../connection/app.js');
+// const truffle_connect = require('../../connection/app.js');
 
-router.get('/get-xbn', (req, res, next)=>{
+router.get('/get-xbn', auth, (req, res, next)=>{
 
-    let account = truffle_connect.web3.eth.accounts[0];
-    res.render('user/purchase-xbn',{
-        page: 'xbn-tokens',
-        account: account
+    //let account = truffle_connect.web3.eth.accounts[0];
+    res.render('xbn/get-xbn',{
+        page: 'get-xbn',
+       // account: account
     });
 
     // res.render('user/purchase-xbn',{
