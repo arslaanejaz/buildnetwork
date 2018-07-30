@@ -28,10 +28,10 @@ window.App = {
 
     });
   },
-  sendTransaction: function(amount){
+  sendTransaction: function(amount,account){
     var self = this;
     web3.eth.sendTransaction({
-      from:user.local.address,
+      from:account,
       // to:"0x25684847be4835c5556295f466c9d973076509bb", 
       to:"0x7bfa11aa43833f8b980803bea180c54b82cacb2d", 
       value: web3.toWei(amount, "ether")},
@@ -56,11 +56,13 @@ window.addEventListener('load', function() {
   var str = window.location+'';
   if(str.split('/').pop()=='register')
   App.start();
+  if(str.split('/').pop()=='get-xbn')
+  App.start();
 
   $('#submit').click(function(){
     var eth = $('#eth').val();
-    console.log(eth);
-    App.sendTransaction(eth);
+    console.log(account);
+    App.sendTransaction(eth, account);
   });
 
 
