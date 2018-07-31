@@ -15,6 +15,12 @@ router.get('/road-map', (req, res, next) => {
     });
 });
 
+router.get('/contractors', (req, res, next) => {
+    res.render('static/contractors',{
+        page: 'contractors'
+    });
+});
+
 router.get('/xbn-tokens', (req, res, next) => {
     res.render('static/xbn-tokens',{
         page: 'xbn-tokens'
