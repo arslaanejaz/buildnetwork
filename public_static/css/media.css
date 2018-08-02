@@ -657,3 +657,9 @@
     }
 
 }
+
+@media (max-width: 767px) { 
+    .we-are {
+        top: 40px;
+    }
+}

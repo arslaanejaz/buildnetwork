@@ -1,0 +1,26 @@
+<!-- Banner area -->
+    <section class="banner_area" style=" background: url(images/banner-bg.jpg) no-repeat fixed;" data-stellar-background-ratio="0.5">
+        <h2>Members Area</h2>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/members" class="active">Members</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
+
+<section id="content">
+<div id="wrapper">
+    <div class="container">
+        <h1>List</h1>
+        <ul>
+            {{#each users}}
+            <li>{{this.local.email}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+ </section>
+
+
+
+
