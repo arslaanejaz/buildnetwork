@@ -658,8 +658,9 @@
 
 }
 
-@media (max-width: 767px) { 
-    .we-are {
-        top: 40px;
+@media (max-width: 1169px) { 
+    .cd-timeline__img img{
+        margin-left: -21px;
+    margin-top: -21px;
     }
 }

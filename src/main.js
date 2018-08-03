@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
   } else {
     // console.warn("No web3 detected. Falling back to http://127.0.0.1:9545. You should remove this fallback when you deploy live, as it's inherently insecure. Consider switching to Metamask for development. More info here: http://truffleframework.com/tutorials/truffle-and-metamask");
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-    window.web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
+    // window.web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
   }
   var str = window.location+'';
   if(str.split('/').pop()=='register')
@@ -71,6 +71,7 @@ window.addEventListener('load', function() {
 
 
 $(document).ready(function(){
+
   $('#eth').val(ethrate);
   $('#xbn').val(ethrate*xbnrate);
   $('#eth').keyup(function(){
@@ -79,6 +80,69 @@ $(document).ready(function(){
     $('#xbn').val(r);
   });
 
+
+
+   /* start */
+   $('#step1_next_btn').click(function(event){
+    event.preventDefault();
+     if($('#email').val()==''){
+       alert('Email Is Required.');
+       return;
+     }else if($('#password').val().length<8){
+      alert('Passwords must be at least 8 characters long.');
+      return;
+     }else if($('#password').val()!=$('#password_cfm').val()){
+      alert('Confirm Password not matched.');
+      return;
+     }else{
+      $('#step1_div').hide();
+      $('#step3_div').hide();
+      $('#step2_div').show();
+     }
+     
+   });
+
+   $('#step2_next_btn').click(function(event){
+    event.preventDefault();
+    if($('#first_name').val()==''){
+      alert('First Name Is Required.');
+      return;
+    }else if($('#address').val()==''){
+      alert('ETH Wallet Address is required.');
+      return;
+    }else{
+     $('#step1_div').hide();
+     $('#step2_div').hide();
+     $('#step3_div').show();
+    }
+   });
+
+
+   $('#step2_back_btn').click(function(event){
+    event.preventDefault();
+      $('#step2_div').hide();
+      $('#step3_div').hide();
+      $('#step1_div').show();
+   });
+
+   $('#step3_back_btn').click(function(event){
+    event.preventDefault();
+      $('#step3_div').hide();
+      $('#step1_div').hide();
+      $('#step2_div').show();
+   });
+
+   $('#submit').click(function(event){
+    event.preventDefault();
+    // alert($('#gridCheck').prop('checked'));
+    if($('#gridCheck').prop('checked')==false){
+      alert('you have to agree to the terms and conditions by checking terms and conditions check box.');
+      return;
+    }else{
+      $('#main_form').submit();
+    }
+    
+   });
   
 
 })
