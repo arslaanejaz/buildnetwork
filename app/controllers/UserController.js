@@ -67,6 +67,16 @@ userController.list = (req, res) => {
     }
 
 
+    userController.update = (req, res) => {
+        Employee.findByIdAndUpdate(req.params.id, { $set: { name: req.body.name, address: req.body.address, position: req.body.position, salary: req.body.salary }}, { new: true }, function (err, employee) {
+        if (err) {
+          res.flash('Some Error Occure!', 'error',flashOption);
+          res.redirect('/profile');
+        }
+        res.flash('Data Updated.', flashOption);
+        res.redirect('/profile');
+      });
+    };
 
     
   };
