@@ -1376,3 +1376,5 @@ animation-delay: .8s;
 .road-map-right{
     text-align: left;
 }
+
+.alert > p, .alert li {font-size: 26px}

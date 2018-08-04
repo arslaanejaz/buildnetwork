@@ -53,37 +53,38 @@ router.get('/profile', auth, (req, res, next) => {
     });
 });
 
-router.post('/profile-update', auth, (req, res, next) => {
-    if(req.body.first_name==''){
-        res.flash('First Name is required!', 'error',flashOption);
-        res.redirect('/register');
-    }else{
-        res.flash('Data Updated successfully.',flashOption);
-        res.redirect('/profile');
-        // user = new User();
-        // user.local.first_name = req.body.first_name;
-        // user.local.last_name = req.body.last_name;
-        // user.local.gender = req.body.gender;
-        // user.local.address1 = req.body.address1;
-        // user.local.address2 = req.body.address2;
-        // user.local.city = req.body.city;
-        // user.local.zip = req.body.zip;
+router.post('/profile-update', userController.update)
+// router.post('/profile-update', auth, (req, res, next) => {
+//     if(req.body.first_name==''){
+//         res.flash('First Name is required!', 'error',flashOption);
+//         res.redirect('/register');
+//     }else{
+//         res.flash('Data Updated successfully.',flashOption);
+//         res.redirect('/profile');
+//         // user = new User();
+//         // user.local.first_name = req.body.first_name;
+//         // user.local.last_name = req.body.last_name;
+//         // user.local.gender = req.body.gender;
+//         // user.local.address1 = req.body.address1;
+//         // user.local.address2 = req.body.address2;
+//         // user.local.city = req.body.city;
+//         // user.local.zip = req.body.zip;
 
-        // user.update({email:'arslaanejaz@gmail.com'}, user, (err,usr)=>{
-        //     if(err){
-        //         res.flash('Some Error Occure while Registering user.',flashOption);
-        //         res.redirect('/profile');
-        //     }else{
-        //         req.session.user = usr;
-        //         res.flash('Data Updated successfully.',flashOption);
-        //         res.redirect('/profile');
-        //         }
+//         // user.update({email:'arslaanejaz@gmail.com'}, user, (err,usr)=>{
+//         //     if(err){
+//         //         res.flash('Some Error Occure while Registering user.',flashOption);
+//         //         res.redirect('/profile');
+//         //     }else{
+//         //         req.session.user = usr;
+//         //         res.flash('Data Updated successfully.',flashOption);
+//         //         res.redirect('/profile');
+//         //         }
                 
-        //     });
-    }
+//         //     });
+//     }
 
    
-});
+// });
 
 router.post('/sign-up', userController.save)
 // router.post('/sign-up', (req, res, next) => {

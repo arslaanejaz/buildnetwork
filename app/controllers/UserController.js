@@ -64,21 +64,38 @@ userController.list = (req, res) => {
                 }
                 
             }});
-    }
-
-
-    userController.update = (req, res) => {
-        Employee.findByIdAndUpdate(req.params.id, { $set: { name: req.body.name, address: req.body.address, position: req.body.position, salary: req.body.salary }}, { new: true }, function (err, employee) {
-        if (err) {
-          res.flash('Some Error Occure!', 'error',flashOption);
-          res.redirect('/profile');
-        }
-        res.flash('Data Updated.', flashOption);
-        res.redirect('/profile');
-      });
-    };
-
-    
+    }   
   };
+
+  userController.update = (req, res) => {
+    var sslocal = req.session.user.local
+    //   var ssuser=req.session.user;;
+    //   local = ssuser;
+    //   ssuser.local.first_name = req.body.first_name;
+
+    // delete sslocal['email'];
+    // delete sslocal['pasword'];
+    // delete sslocal['updated_at'];
+
+    sslocal.first_name = req.body.first_name;
+    sslocal.last_name = req.body.last_name;
+    sslocal.gender = req.body.gender;
+    sslocal.address1 = req.body.address1;
+    sslocal.address2 = req.body.address2;
+    sslocal.address = req.body.address;
+    sslocal.city = req.body.city;
+    sslocal.zip = req.body.zip;
+
+
+    User.findByIdAndUpdate(req.body.id, { $set: {local: sslocal}}, { new: true }, function (err, employee) {
+    if (err) {
+      res.flash('Some Error Occure!', 'error',flashOption);
+      res.redirect('/profile');
+    }
+    res.flash('Data Updated.', flashOption);
+    // req.session.user = usr;
+    res.redirect('/profile');
+  });
+};
 
   module.exports = userController;

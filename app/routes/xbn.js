@@ -13,7 +13,7 @@ router.get('/get-xbn', auth, (req, res, next)=>{
 
     //let account = truffle_connect.web3.eth.accounts[0];
     res.render('xbn/get-xbn',{
-        page: 'get-xbn',
+        page: 'xbn-token',
        // account: account
     });
 
@@ -31,6 +31,15 @@ router.get('/get-xbn', auth, (req, res, next)=>{
     //     });
     // });
 
+});
+
+router.get('/xbn-token', (req, res, next)=>{
+
+    //let account = truffle_connect.web3.eth.accounts[0];
+    res.render('xbn/xbn-token',{
+        page: 'xbn-token',
+       // account: account
+    });
 });
 
 router.get('/members', (req, res, next)=>{
