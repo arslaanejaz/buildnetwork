@@ -28,3 +28,5 @@ benchmarks/graphs
 
 app/config/database.js
 app/config/session.js
+
+public_static/movie.mp4
