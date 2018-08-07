@@ -1,18 +1,92 @@
 <!--timer section-->
 <div class="container timmer-new">
-  <h1 id="head">Private Sale Start</h1>
+  <h1 id="head">Private Sale</h1>
   <ul>
       {{!-- <li>Private Sale Start <span>30% discount</span></li> --}}
-    <li><span id="days"></span>days</li>
-    <li><span id="hours"></span>Hours</li>
-    <li><span id="minutes"></span>Minutes</li>
-    <li><span id="seconds"></span>Seconds</li>
+    <li>Coming Soon</li>
   </ul>
   <h1 style="color: red;
     font-weight: bold;">30% discount</h1>
+
+    <section>
+<div class="subscribe">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+        <hgroup>
+          <h2>
+            Subscribe For More Information 
+          </h2>
+          {{!-- <h1 class="free">For Free</h1> --}}
+         </hgroup>
+    	 <div class="well">
+             <form action="#">
+              <div class="input-group">
+                 <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Your Email" required>
+                 <button class="btn btn-info btn-lg" type="submit">Submit</button>
+              </div>
+             </form>
+    	 </div>
+         <small class="promise"><em>We won't send spam.</em></small>
+		</div>
+	</div>
+</div>
+</section>
+  <br />
+  <br />
 </div>
 
 <style>
+
+
+.subscribe section {
+    padding: 100px 0;
+    text-align: center;
+}
+.subscribe select.frecuency {
+    border: none;
+    font-style: italic;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform .35s ease-in;
+    transition: -webkit-transform .35s ease-in;
+    border-bottom: none;
+}
+.subscribe select.frecuency:focus {
+    outline: none;
+    border-bottom: 5px solid #39b3d7;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-transition: -webkit-transform .35s ease-in;
+    transition: -webkit-transform .35s ease-in;
+}
+.subscribe .free {
+    text-transform: uppercase;
+}
+.subscribe .input-group {
+    margin: 20px auto;
+    width: 100%;
+}
+.subscribe input.btn.btn-lg,
+.subscribe input.btn.btn-lg:focus {
+    outline: none;
+    width: 60%;
+    height: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.subscribe button.btn {
+    width: 40%;
+    height: 60px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.subscribe .promise {
+    color: #999;
+}
+
+
 
 .timmer-new {
     margin-top: 100px;
@@ -48,34 +122,7 @@
 }
 </style>
 
-
-
 <!--timer section-->
-<script>
-const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
-
-let countDown = new Date('Aug 10, 2018 12:00:00').getTime(),
-    x = setInterval(function() {
-
-      let now = new Date().getTime(),
-          distance = countDown - now;
-
-      document.getElementById('days').innerText = Math.floor(distance / (day)),
-        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-      
-      //do something later when date is reached
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
-      //}
-
-    }, second)
-</script>
 
     <!--Banner part start-->
     <section id="banner_part">
@@ -92,6 +139,10 @@ let countDown = new Date('Aug 10, 2018 12:00:00').getTime(),
                             <div class="col-md-6">
                                 <h2 style="font-size:64px">We are Connected</h2>
                                 <p style="font-size:24px">With over <b style="font-size: 32px">297,340+</b> construction contractors in different sectors around the world.</p>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
                                 <a href="/xbn-token">XBN Token</a>
                                 {{!-- <a href="#" class="blank">Our Story</a> --}}
                                 <br style="clear: both" />
@@ -158,23 +209,23 @@ let countDown = new Date('Aug 10, 2018 12:00:00').getTime(),
         <div class="container">
             <div class="row">
                 <div class="section_part_text">
-                     <div class=" col-md-6 textarea">
+                     <div style="text-align: center" class="col-md-12 textarea">
                          <div class="upper_part">
                             <h4>Our Mission</h4>
                         </div>
                         
                             
-<video width="420" height="340" controls>
+<video width="560" height="420" controls>
 <source src="movie.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
                         
-                         <div class="banner_text">
+                         {{!-- <div class="banner_text">
                              <div class="button-styling">
                                 <a href="/xbn-token">XBN Token</a>
                              </div>
-                         </div>
+                         </div> --}}
                      </div>
                      {{!-- <div class=" col-md-6 img-area">
                         <img src="images/mission.png"  class="img-responsive" alt="placeholder+image">
